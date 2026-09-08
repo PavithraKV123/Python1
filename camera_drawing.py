@@ -20,12 +20,12 @@ def draw(event, x, y, flags, param):
 
     elif event == cv2.EVENT_MOUSEMOVE:
         if drawing:
-            cv2.line(canvas, (ix, iy), (x, y), (0, 0, 355), 5)
+            cv2.line(canvas, (ix, iy), (x, y), (0, 0, 255), 5)
             ix, iy = x, y
 
     elif event == cv2.EVENT_LBUTTONUP:
         drawing = False
-        cv2.line(canvas, (ix, iy), (x, y), (0, 0, 355), 5)
+        cv2.line(canvas, (ix, iy), (x, y), (0, 0, 255), 5)
 
 
 cv2.namedWindow("Camera Drawing")
